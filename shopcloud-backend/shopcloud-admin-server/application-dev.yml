@@ -1,0 +1,36 @@
+server:
+  port: 9765
+  
+logging:
+  common-pattern: '%d{HH:mm:ss.SSS}:[%5p] [%t] [%C{1}:%M:%L] --> %m%n'
+  level:
+    console: INFO
+    rest: INFO
+    service: INFO
+    sql: DEBUG
+
+spring:
+  rabbitmq:
+    host: shopcloud.rabbitmq.host
+    port: 5672
+    password: guest
+    username: guest
+  redis:
+    host: shopcloud.redis.host
+    port: 6379
+    key-prefix: dev
+shopcloud:
+  mysql:
+    admin:
+      database: shopcloud_admin_dev       # 根据环境更改
+    host: shopcloud.mysql.host     # 根据环境更改
+    port: 3306                  # 根据环境更改
+    username: root              # 根据环境更改
+    password: QayZvYFf8j1k6qISOAwo7kraRGwz0ds1hqkO+92tM37XOyZ+Naiu8lqmc6QWvI7G5sCo8UIAApqLD6pNsFjuSQ==
+# rabbitMQ/Mysql/Redis ip，端口，帐号等根据环境自行修改。
+
+id-generator:
+  machine-code: 1  # id生成器机器掩码
+
+test: dev_修改2
+hello: dev_hello_修改2
